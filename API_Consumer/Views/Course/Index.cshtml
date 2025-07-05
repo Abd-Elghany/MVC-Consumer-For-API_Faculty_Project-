@@ -1,0 +1,23 @@
+﻿@model List<CourseDTO>
+
+<h2>Courses</h2>
+<a asp-action="Create">Create New</a>
+
+<table class="table">
+    <thead>
+        <tr><th>Name</th><th>Instructor</th><th>Actions</th></tr>
+    </thead>
+    <tbody>
+        @foreach (var course in Model)
+        {
+            <tr>
+                <td>@course.Name</td>
+                <td>@course.Instructor</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@course.Id" class="btn btn-warning">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@course.Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

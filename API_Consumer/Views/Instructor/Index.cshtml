@@ -1,0 +1,29 @@
+﻿@model List<InstructorDTO>
+@{
+    ViewData["Title"] = "Instructors";
+}
+<h2>Instructors</h2>
+<a asp-action="Create" class="btn btn-primary">Add Instructor</a>
+
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Courses</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var instructor in Model)
+        {
+            <tr>
+                <td>@instructor.Name</td>
+                <td>@string.Join(", ", instructor.Courses)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@instructor.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@instructor.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
