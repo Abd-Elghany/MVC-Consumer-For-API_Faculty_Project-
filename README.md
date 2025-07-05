@@ -25,22 +25,28 @@ This project provides a user-friendly interface to interact with the backend API
 MVC_Consumer_For_API_Faculty_Project/
 │
 ├── Controllers/ # MVC controllers (e.g., DepartmentController)
-
+│
 ├── Models/ # ViewModels & DTOs matching API structure
-
+│
 ├── Services/ # API service classes using HttpClient
-
+│
 ├── Views/ # Razor views (.cshtml)
-
+│
 │ ├── Shared/ # Layout, partials
-
+│
 │ ├── Department/ # Department views
+│
 │ ├── Instructor/ # Instructor views
 │ └── Course/ # Course resource views
+│
 ├── wwwroot/ # Static assets (CSS, JS, etc.)
+│
 ├── appsettings.json # App config
+│
 ├── Program.cs # App bootstrap
+│
 ├── Startup.cs (if used) # Middleware/services (older versions)
+│
 └── README.md # Project documentation
 ---
 
